@@ -1,11 +1,14 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 
+
+
 local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
 local SOLID_RIGHT_ARROW = utf8.char(0xe0b0)
 
 local list = {
-  font = wezterm.font('RobotoMono NF', { weight = 'Bold' }),
+  --font = wezterm.font('RobotoMono NF', { weight = 'Bold' }),
+  font = wezterm.font('RobotoMono NF'),
   color_scheme = "3024 Night",
   scrollback_lines = 3500,
   enable_scroll_bar = true,
