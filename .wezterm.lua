@@ -12,7 +12,13 @@ local list = {
   -- default_prog = { 'C:\\Program Files\\PowerShell\\7\\pwsh.exe', },
   default_prog = { 'C:\\Program Files\\nu\\bin\\nu.exe', },
   default_cwd = "C:\\Users\\__M__\\Documents\\COM",
-  keys = {
+ window_padding = {
+  left = '1cell',
+  right = '1cell',
+  top = '0.5cell',
+  bottom = '0.5cell',
+} , 
+    keys = {
     {
       key = 'Enter',
       mods = 'CTRL',
@@ -47,7 +53,7 @@ local list = {
       },
     },
     {
-      key = 'f',
+      key = 'F',
       mods = 'CTRL',
       action = wezterm.action.ToggleFullScreen,
     },
@@ -60,6 +66,11 @@ local list = {
       key = 'w',
       mods = 'CTRL',
       action = wezterm.action.CloseCurrentPane { confirm = true },
+    },
+    {
+      key = 'W',
+      mods = 'CTRL',
+      action = wezterm.action.CloseCurrentTab{ confirm = true },
     },
     { key = '1',  mods = 'ALT', action = act.ActivatePaneByIndex(0) },
     { key = '2',  mods = 'ALT', action = act.ActivatePaneByIndex(1) },
